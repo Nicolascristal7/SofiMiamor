@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Página de Amor</title>
+    <style>
+        body {
+            background-image: url('https://m.media-amazon.com/images/I/71cyUFQFIXL._AC_UF894,1000_QL80_.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ff0000;
+        }
+
+        p {
+            font-size: 36px;
+            animation: colorChange 5s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            25% {
+                color: pink;
+            }
+            50% {
+                color: purple;
+            }
+            75% {
+                color: magenta;
+            }
+            100% {
+                color: red;
+            }
+        }
+
+        .quote {
+            font-size: 24px;
+            font-style: italic;
+            margin: 20px;
+        }
+
+        .love-message {
+            font-size: 30px;
+            color: #ff3399;
+            margin: 30px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            margin: 10px;
+            border: 2px solid #ff3399;
+            border-radius: 10px;
+        }
+
+        /* Estilo para los corazones */
+        .hearts {
+            position: absolute;
+            font-size: 24px; /* Tamaño de corazón */
+            color: red; /* Color de corazón */
+            animation: moveHearts 2s alternate infinite; /* Animación de movimiento */
+        }
+
+        @keyframes moveHearts {
+            0%, 100% {
+                left: 20px; /* Posición inicial */
+            }
+            50% {
+                left: calc(100% - 40px); /* Posición intermedia */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Página de Amor</h1>
+    <p>¡Hola, Nicolás y Sofía!</p>
+    <p>Esta página está llena de amor y felicidad.</p>
+    <p>Espero que disfruten de cada momento juntos.</p>
+
+    <!-- Galería de Imágenes -->
+    <div class="image-gallery">
+        <img src="https://i.imgur.com/L7Mi1HP_d.webp" alt="Imagen 1">
+        <img src="https://i.imgur.com/BBefGdh_d.webp" alt="Imagen 2">
+        <img src="https://i.imgur.com/YX4lQUB_d.webp" alt="Imagen 3">
+    </div>
+
+    <!-- Cita Romántica del Día -->
+    <div class="quote">
+        <p>"El amor no se trata de mirarse el uno al otro, sino de mirar juntos en la misma dirección." - Antoine de Saint-Exupéry</p>
+    </div>
+
+    <!-- Mensaje de Amor -->
+    <div class="love-message">
+        <p>Quiero que sepas cuánto significas para mí, Sofía. Cada día a tu lado es un regalo que atesoro. Te amo más de lo que las palabras pueden expresar.</p>
+    </div>
+
+    <!-- Corazones moviéndose en la parte superior de la página -->
+    <div class="hearts" style="top: 50px; left: 20px;">❤️</div>
+    <div class="hearts" style="top: 70px; left: 120px;">❤️</div>
+    <div class="hearts" style="top: 40px; left: 220px;">❤️</div>
+    <!-- Agrega más corazones si lo deseas -->
+
+</body>
+</html>
