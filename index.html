@@ -83,6 +83,21 @@
                 left: calc(100% - 40px); /* Posición intermedia */
             }
         }
+
+        /* Estilo para el botón de reproducción */
+        #play-button {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            background-color: rgba(255, 51, 153, 0.8); /* Color ligeramente transparente */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -108,10 +123,13 @@
         <p>Quiero que sepas cuánto significas para mí, Sofía. Cada día a tu lado es un regalo que atesoro. Te amo más de lo que las palabras pueden expresar.</p>
     </div>
 
+    <!-- Botón de Reproducción -->
+    <button id="play-button" onclick="playAudio()">Mi amor haz click acá para reproducir la música!</button>
+
     <!-- Reproductor de Música -->
-    <audio controls>
-        <source src="https://raw.githubusercontent.com/Nicolascristal7/Audio/main/Baby%20Vuvu%20aka%20Cutest%20Baby%20Song%20in%20the%20world%20-%20Everybody%20Dance%20Now%20(Official%20Music%20Video).mp3 " type="audio/mpeg">
-    
+    <audio id="myAudio">
+        <source src="https://raw.githubusercontent.com/Nicolascristal7/Audio/main/Baby%20Vuvu%20aka%20Cutest%20Baby%20Song%20in%20the%20world%20-%20Everybody%20Dance%20Now%20(Official%20Music%20Video).mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
     </audio>
 
     <!-- Corazones moviéndose en la parte superior de la página -->
@@ -120,8 +138,15 @@
     <div class="hearts" style="top: 40px; left: 220px;">❤️</div>
     <!-- Agrega más corazones si lo deseas -->
 
+    <!-- Script para reproducir el audio y desplazar la página -->
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            setTimeout(function() {
+                window.scrollBy(0, window.innerHeight);
+            }, 1000); // Desplaza la página hacia abajo después de 1 segundo
+        }
+    </script>
 </body>
 </html>
-
-
-    
